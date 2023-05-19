@@ -1,0 +1,115 @@
+*{    margin: 0;    padding: 0;    transition: .2s ease-in-out;}
+@font-face {    font-family:Tanha ;    src: url(fonts/eot/Tanha-FD.eot),
+    url(fonts/ttf/Tanha-FD.eot),    url(fonts/woff/Tanha-FD.woff),
+    url(fonts/woff2/Tanha-FD.woff2);
+}
+@font-face {    font-family:Vazir ;    src: url(fonts/eot/Vazir-Bold.eot),
+    url(fonts/ttf/Vazir-Bold.ttf),    url(fonts/woff/Vazir-Bold.woff),
+    url(fonts/woff2/Vazir-Bold.woff2);
+}
+:root{    --font-primatry:Tanha;    --font-secondary:Vazir;    --color-primary:#7322a6;
+    --color-primary-dark:#08001b;    --color-black:#000;    --color-white:#fff;
+}
+body{    width: 100%;    font-family: var(--font-secondary);
+     background-color: var(--color-primary-dark); color: white;
+    }
+header{ height: 70px; width: 100%;   display: flex;  justify-content: space-between;}
+header nav{width: 100%;    display: flex; flex-direction: row-reverse;    align-items: center; margin-top: 30px;
+        justify-content: space-between;}
+header nav .logo{    width: 100px;overflow: hidden; margin-left: 20px;}
+header nav .logo img{    width: 100%;}
+header nav ul{    display: flex;    width: 80%;    list-style: none;}
+header nav ul li{    margin-right: 40px;    font-family: var(--font-primatry);
+    padding: 5px 10px;    position: relative;   color: rgb(207, 207, 207);
+}
+header nav ul li.select{    color: white;    position: relative;}
+header nav button{    background-color: transparent;    color: #fff;    border: none;
+    margin-left: 30px;
+}
+main{    width: 100%;}
+.LandingPage{width: 100%;    height: 100vh;    display: flex;    flex-direction: column;
+    justify-content: space-between;    align-items: center;    position: absolute;
+    top: 0;    z-index: -1;
+}
+.LandingPage .img-content{    display: flex;    height: 100%;    justify-content: center;
+    width: 100%;    z-index: 0;     overflow: hidden; position: relative;
+}
+.LandingPage .img-content::before{    content: '';    position: absolute;    width: 100%;
+    height: 100%;    background-color: rgba(0,0,0,.5); top: 0;left: 0;
+}
+.LandingPage .img-content img{   height: 100%; width: 100%;}
+.LandingPage .content{    display: flex;    z-index: 1;
+    justify-content: space-between;align-items: center;    width: 100%;    height: 100%;
+    position: absolute;    bottom: 0px; background-color: brown;
+}
+.LandingPage .content .background{    width: 40%;    height: 100%;    color: brown;
+    display: flex;    flex-direction: row;    position: relative;    justify-content: center;
+}
+.LandingPage .content .background::before{    content: '';    position: absolute;
+    width: 100%;    height: 100%;    background-color: rgb(33, 33, 33);    z-index: -1;
+    transform: SkewX(-23.7deg);    transform-origin: bottom left;
+}
+.LandingPage .content .background .social{    color: #fff;    position: absolute;
+    top: calc(50% - 60px);    right: 0;
+}
+.LandingPage .content .background .social ul{    list-style-type: none;}
+.LandingPage .content .background .social ul li{    margin: 45px 25px;}
+.LandingPage .content .background .arrow{    display: flex;    flex-direction: column;
+    align-self: flex-end;    align-items: center;    margin-bottom: 40px;
+}
+.LandingPage .content .background .arrow .slider-pic{    margin-bottom: 20px;
+    height: 500px;    margin-left: -10px;    width: 300px;
+}
+.LandingPage .content .background .arrow .slider-pic img{    height: 100%;}
+.LandingPage .content .background .arrow .slider-container{    display: flex;
+    width: 80%;    justify-content: space-around;
+}
+.LandingPage .content .background .arrow .slider-container ol{    list-style: none;
+    width: 100%;    justify-content: space-around;    display: flex;    align-items: center;
+}
+.LandingPage .content .background .arrow .slider-container ol li{    width: 10px;
+    height: 10px;    background-color: brown;    border-radius: 100%;    opacity: .5;
+}
+.LandingPage .content .background .arrow .slider-container ol li.select{
+    background-color: brown;    border: 1px solid white;    opacity: 1;
+}
+.LandingPage .content .detail-content .text span{    position: relative;
+    margin-bottom: 5px;
+}
+.LandingPage .content .detail-content{    height: 100%;    display: flex;
+    flex-direction: column;    justify-content: space-between;
+}
+.LandingPage .content .detail-content .text{    margin-top: 130px;}
+.LandingPage .content .detail-content .text span::after{    content: '';
+    position: absolute;    width: 150px;    height: 1px;    background-color: white;
+    bottom: 9px;    margin-right: 5px;
+}
+.LandingPage .content .detail-content .text h1{    font-size: 55pt;}
+.LandingPage .content .detail-content .text h2{    font-size: 30pt;    margin-bottom: 20px;}
+.LandingPage .content .detail-content .text button{    width: 100px;    padding: 15px 10px;
+    background: transparent;    color: white;    border: 1px solid white;
+}
+.LandingPage .content .detail-content .items{    display: flex;    flex-direction: row;
+    justify-content: space-around;    align-self: flex-end;    margin-bottom: 20px;
+}
+.LandingPage .content .detail-content .items .item{    display: flex;
+    flex-direction: row;    width: 48%;
+}
+.LandingPage .content .detail-content .items .item .img-container{    height: 120px;
+    width: 90px;    position: relative;    margin-left: 5px;
+}
+.LandingPage .content .detail-content .items .item .img-container::before{
+    content: '';    width: 100%;    height: 100%;    background-color: rgb(151, 0, 0);
+    position: absolute;    z-index: -1;
+}
+.LandingPage .content .detail-content .items .item .img-container img{    height: 100%;}
+.LandingPage .content .detail-content .items .item .item-text{    font-size: 10pt;}
+.LandingPage .content .detail-content .items .item .item-text span{    font-size: 8pt;
+    color: wheat;
+}
+.LandingPage .content .detail-content .items .item .item-text p{    font-size: 8pt;
+    color: rgb(249, 232, 199);    margin-bottom: 20px;
+}
+.LandingPage .content .detail-content .items .item .item-text .price{    color: #fff;
+    font-size: 10pt;
+}
